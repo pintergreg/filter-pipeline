@@ -1,0 +1,35 @@
+[project]
+name = "filter"
+version = "0.1.0"
+description = "Converted from conda env.yaml"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "csvkit",
+    "geopandas",
+    "lxml",
+    "numpy",
+    "pandas",
+    "scipy",
+    "tqdm",
+
+    # PyTorch CUDA 11.x
+    "torch",
+
+    # Git dependencies
+    "shortsim @ git+https://github.com/hsci-r/shortsim.git",
+    "matrix-align @ git+https://github.com/maciejjan/matrix-align.git",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu118" }
+
+[dependency-groups]
+gpu = [
+    # FAISS GPU wheels are generally not available on PyPI.
+    # You will likely need to install via conda or build manually.
+]
