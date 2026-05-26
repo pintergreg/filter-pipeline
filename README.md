@@ -18,7 +18,7 @@ git submodule update --init --recursive
 Further, install the Python dependencies. The preferred way of doing it
 is through Anaconda - use the environment file `env.yml`. For CSC
 computing clusters, it is recommended to use
-[Tykkky](https://docs.csc.fi/computing/containers/tykky/).
+[Tykky](https://docs.csc.fi/computing/containers/tykky/).
 
 The different steps of the pipeline are called using GNU Make. The
 environment variable `DATA_DIR` should be set to the path of the output
